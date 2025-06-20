@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('Lap.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  backdrop-filter: blur(8px);
+}
+
+.sidebar {
+  width: 260px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+.school-name {
+  margin-top: 10px;
+}
+
+.school-name strong {
+  font-size: 16px;
+  display: block;
+  color: #00BFFF;
+}
+
+.school-name .sub {
+  font-size: 12px;
+  color: #ff4d4d;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  padding: 12px 15px;
+  margin: 5px 0;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s, border-left 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: rgba(0, 191, 255, 0.3);
+  border-left: 4px solid #00BFFF;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  color: white;
+  overflow-y: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.topbar h2 {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.summary-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00BFFF;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.box p {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.box h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    flex: 1 1 45%;
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
